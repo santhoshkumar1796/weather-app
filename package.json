@@ -1,0 +1,16 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Vanilla JS weather app using the free Open-Meteo API, with Playwright tests that mock the network",
+  "scripts": {
+    "start": "http-server -p 5173 -o",
+    "test": "playwright test",
+    "report": "playwright show-report"
+  },
+  "author": "Santhosh Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Weather</h1>
+    <form id="search-form" role="search">
+      <input id="city" name="city" type="search" placeholder="Search city…" aria-label="City" autocomplete="off" required />
+      <button type="submit">Search</button>
+    </form>
+    <div class="units" role="group" aria-label="Units">
+      <button type="button" data-unit="celsius" aria-pressed="true">°C</button>
+      <button type="button" data-unit="fahrenheit" aria-pressed="false">°F</button>
+    </div>
+
+    <p id="status" data-testid="status" role="status"></p>
+
+    <section id="current" data-testid="current" hidden>
+      <h2 data-testid="location"></h2>
+      <div class="now">
+        <span class="icon" data-testid="icon"></span>
+        <span class="temp" data-testid="temperature"></span>
+      </div>
+      <p data-testid="condition"></p>
+      <ul class="details">
+        <li>Humidity <strong data-testid="humidity"></strong></li>
+        <li>Wind <strong data-testid="wind"></strong></li>
+      </ul>
+    </section>
+
+    <section id="forecast" hidden>
+      <h3>5-day forecast</h3>
+      <ol data-testid="forecast"></ol>
+    </section>
+
+    <section id="recent" hidden>
+      <h3>Recent searches</h3>
+      <ul data-testid="recent"></ul>
+    </section>
+  </main>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
